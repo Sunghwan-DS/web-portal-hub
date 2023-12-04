@@ -2,6 +2,7 @@ package jsh.search.service;
 
 import jakarta.transaction.Transactional;
 import jsh.search.domain.KeywordStatus;
+import jsh.search.domain.PopularKeywords;
 import jsh.search.domain.entity.SearchKeywordsEntity;
 import jsh.search.infra.BlogSearchRepository;
 import lombok.RequiredArgsConstructor;
@@ -34,5 +35,14 @@ public class KeywordServiceImpl implements KeywordService {
             return KeywordStatus.FAIL;
         }
         return KeywordStatus.SUCCESS;
+    }
+
+    public PopularKeywords getPopularKeywords() {
+        try {
+            return PopularKeywords.of(blogSearchRepository.findTop10ByOrderBySearchCountDesc());
+        } catch (Exception e) {
+            log.error("BlogSearchRepository.findTop10ByOrderBySearchCountDesc error: {}", e.getMessage());
+            return PopularKeywords.emptyOf();
+        }
     }
 }

@@ -22,4 +22,12 @@ public class KeywordServiceTest {
 
         assertEquals(result, KeywordStatus.SUCCESS);
     }
+
+    @Test
+    @DisplayName("인기검색어 10개 조회 테스트")
+    void getPopularKeywordsTest() {
+        var popularKeywords = keywordService.getPopularKeywords();
+
+        assertNotNull(popularKeywords);
+    }
 }
