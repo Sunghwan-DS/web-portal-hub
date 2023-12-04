@@ -160,6 +160,24 @@ DTO와 헷갈리지 말 것, DTO는 프레젠테이션 계층과 도메인 계�
 
 ## 3.9. 인터페이스 계층 구현
 
+# 4. DB 생성
+## 4.1. MySQL Docker 컨테이너 설정
+1. docker 설치
+2. $ docker pull mysql
+3. $ docker run --name web-portal-hub -e MYSQL_ROOT_PASSWORD=pass -d -p 3306:3306 mysql
+4. $ docker start web-portal-hub
+5. $ docker exec -it web-portal-hub bash
+6. $ mysql -u root -p
+
+## 4.2. DB 생성
+$ CREATE DATABASE web_portal_hub default CHARACTER SET UTF8
+
+## 4.3. 테이블 생성
+CREATE TABLE search_keywords (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  keyword VARCHAR(255) NOT NULL,
+  search_count BIGINT NOT NULL
+);
 
 
 
