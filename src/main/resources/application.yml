@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: web-portal-hub
+  profiles:
+    active: local
