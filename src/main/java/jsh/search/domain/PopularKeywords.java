@@ -20,4 +20,8 @@ public record PopularKeywords(List<PopularKeyword> list) {
                                 .list(List.copyOf(list))
                                 .build();
     }
+
+    public boolean isEmpty() {
+        return list().isEmpty();
+    }
 }
