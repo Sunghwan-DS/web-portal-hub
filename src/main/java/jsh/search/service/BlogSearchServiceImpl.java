@@ -1,6 +1,6 @@
 package jsh.search.service;
 
-import jsh.search.domain.BlogsDTO;
+import jsh.blog.domain.BlogsDTO;
 import jsh.search.domain.SearchRequest;
 import jsh.search.infra.KakaoSearchClient;
 import lombok.RequiredArgsConstructor;

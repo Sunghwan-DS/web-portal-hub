@@ -1,7 +1,7 @@
 package jsh.search.service;
 
 import jsh.search.domain.KeywordStatus;
-import jsh.search.domain.PopularKeywords;
+import jsh.blog.domain.PopularKeywords;
 
 public interface KeywordService {
     KeywordStatus increaseSearchCnt(String keyword);

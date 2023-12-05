@@ -1,6 +1,6 @@
 package jsh.search.controller;
 
-import jsh.search.domain.PopularKeywordsDTO;
+import jsh.blog.domain.PopularKeywordsDTO;
 import jsh.search.service.KeywordService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

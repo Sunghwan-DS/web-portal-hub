@@ -1,4 +1,4 @@
-package jsh.search.domain;
+package jsh.blog.domain;
 
 import lombok.Builder;
 import lombok.Value;

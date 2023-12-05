@@ -1,5 +1,6 @@
-package jsh.search.domain;
+package jsh.blog.domain;
 
+import jsh.search.domain.KakaoBlogSearchResponse;
 import lombok.Builder;
 import lombok.Value;
 

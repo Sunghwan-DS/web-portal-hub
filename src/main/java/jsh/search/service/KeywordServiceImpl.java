@@ -2,7 +2,7 @@ package jsh.search.service;
 
 import jakarta.transaction.Transactional;
 import jsh.search.domain.KeywordStatus;
-import jsh.search.domain.PopularKeywords;
+import jsh.blog.domain.PopularKeywords;
 import jsh.search.domain.entity.SearchKeywordsEntity;
 import jsh.search.infra.BlogSearchRepository;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
 package jsh.search.infra;
 
-import jsh.search.domain.PopularKeyword;
+import jsh.blog.domain.PopularKeyword;
 import jsh.search.domain.entity.SearchKeywordsEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

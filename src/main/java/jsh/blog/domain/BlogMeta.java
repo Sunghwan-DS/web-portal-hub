@@ -1,5 +1,6 @@
-package jsh.search.domain;
+package jsh.blog.domain;
 
+import jsh.search.domain.KakaoBlogMeta;
 import lombok.Builder;
 
 @Builder
