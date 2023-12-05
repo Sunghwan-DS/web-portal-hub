@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class BlogSearchServiceImpl implements BlogSearchService {
 
     private final KakaoSearchClient kakaoSearchClient;
+    private final KeywordService keywordService;
 
     @Override
     public BlogsDTO search(SearchRequest request) {
@@ -18,6 +19,7 @@ public class BlogSearchServiceImpl implements BlogSearchService {
                                                   request.sortType().getCode(),
                                                   request.page(),
                                                   request.size());
+        keywordService.increaseSearchCnt(request.keyword());
         return BlogsDTO.of(result);
     }
 }
