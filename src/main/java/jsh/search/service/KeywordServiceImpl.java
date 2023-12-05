@@ -45,4 +45,14 @@ public class KeywordServiceImpl implements KeywordService {
             return PopularKeywords.emptyOf();
         }
     }
+
+    public Long getSearchCount(String keyword) {
+        try {
+            var result = blogSearchRepository.findByKeyword(keyword);
+            return result.getSearchCount();
+        } catch (Exception e) {
+            log.error("BlogSearchRepository.findByKeyword error: {}", e.getMessage());
+            return null;
+        }
+    }
 }

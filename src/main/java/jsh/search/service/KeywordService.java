@@ -6,4 +6,5 @@ import jsh.blog.domain.PopularKeywords;
 public interface KeywordService {
     KeywordStatus increaseSearchCnt(String keyword);
     PopularKeywords getPopularKeywords();
+    Long getSearchCount(String keyword);
 }
