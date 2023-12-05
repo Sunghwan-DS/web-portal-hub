@@ -1,5 +1,6 @@
 package jsh.search.infra;
 
+import jsh.search.domain.KakaoBlogSearchResponse;
 import jsh.support.config.KakaoApiHeaderFeignConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface KakaoSearchClient {
 
     @GetMapping("/blog")
-    Object searchBlog(@RequestParam("query") String query,
-                     @RequestParam("sort") String sort,
-                     @RequestParam(value = "page", defaultValue = "1") int page,
-                     @RequestParam(value = "size", defaultValue = "10") int size);
+    KakaoBlogSearchResponse searchBlog(@RequestParam("query") String query,
+                                       @RequestParam("sort") String sort,
+                                       @RequestParam(value = "page", defaultValue = "1") int page,
+                                       @RequestParam(value = "size", defaultValue = "10") int size);
 }
